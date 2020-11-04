@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.repository.skeleton.ui.example.SingleItem" />
+
+        <variable
+            name="actionItemListener"
+            type="com.repository.skeleton.ui.example.OnItemActionListener" />
+
+        <variable
+            name="position"
+            type="Integer" />
+    </data>
+
+    <TextView
+        android:id="@+id/rb_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:onClick="@{() -> actionItemListener.onItemClicked(model)}"
+        android:text="@{model.name}"
+        android:textSize="@dimen/text_size_16"
+        tools:text="@string/app_name" />
+</layout>
